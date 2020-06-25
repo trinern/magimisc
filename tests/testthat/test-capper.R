@@ -14,5 +14,4 @@ testthat::test_that("Capper function behaves in an orderly fashion", {
 
   # Test that all numbers are smaller than or equal to ceiling
   purrr::map(capping, ~testthat::expect_lte(.x, 500))
-
 })
