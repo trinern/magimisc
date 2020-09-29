@@ -2,3 +2,5 @@
 
 export(capper)
 export(safely_map_dfr)
+export(read_excel_url)
+
