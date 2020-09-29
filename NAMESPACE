@@ -3,4 +3,6 @@
 export(capper)
 export(discount_cashflow)
 import(dplyr)
+export(safely_map_dfr)
+export(read_excel_url)
 
