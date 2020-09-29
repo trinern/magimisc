@@ -4,20 +4,32 @@
 \alias{tabset_list}
 \title{Create tabset from a list}
 \usage{
-tabset_list(list, header_level)
+tabset_list(list, header_level, header_names = NULL)
 }
 \arguments{
 \item{list}{A \code{list} of elements to be printed in each tab}
 
-\item{header_level}{An \code{integer} specifying the level of the headers}
-}
-\value{
+\item{header_level}{An \code{integer} specifying the level of the headers. Må være en mer enn overskriften over.}
 
+\item{header_names}{Vektor med navn på tabs.}
 }
 \description{
-Create tabset from a list
+Hvert element i listen blir printet i en "tab" i en markdown rapport.
 }
 \examples{
+```{r cars}
+my_plot_function <- function(cylinders) {
+mtcars \%>\%
+filter(cyl == cylinders) \%>\%
+ggplot(aes(hp, mpg)) +
+geom_point()
+}
+p <- purrr::map(c(4, 6, 8), my_plot_function)
+```
 
+# Overskrift {.tabset}
+```{r pressure, results="asis"}
+tabset_list(p, 2)
+```
 
 }
