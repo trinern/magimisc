@@ -15,6 +15,9 @@ discount_cashflow(df, cf, rate, period)
 
 \item{period}{Period, e.g. year.}
 }
+\value{
+
+}
 \description{
 This function discounts a cash flow with the interest and return the net present value (NPV). The function assumes
 that the first period of \code{df} is period zero in the npv calculation, thus the cash flows in this period is not

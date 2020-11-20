@@ -13,6 +13,9 @@ tabset_list(list, header_level, header_names = NULL)
 
 \item{header_names}{Vektor med navn på tabs.}
 }
+\value{
+
+}
 \description{
 Hvert element i listen blir printet i en "tab" i en markdown rapport.
 }

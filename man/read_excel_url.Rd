@@ -83,7 +83,7 @@ This function use readxl::read_excel to read files directly from a URL.
 Other arguments are passed directly to read_excel.
 See \code{\link[readxl]{read_excel}}.
 The function use \code{\link[httr]{GET}} from the httr-package to download the file
-and \code{\link[httr]{write_disk}} from the same package to write the file.
+and \code{\link[httr]{write_disk}} from the same package to write the file. The downloaded file is deleted after use
 }
 \examples{
 read_excel_url(path = "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLSX_100.xlsx")

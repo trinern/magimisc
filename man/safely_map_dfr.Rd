@@ -36,7 +36,7 @@ a variable with that name, storing either the name (if \code{.x} is named) or
 the index (if \code{.x} is unnamed) of the input. If \code{NULL}, the default, no
 variable will be created.
 
-Only applies to \code{_dfr} variant.}
+Only applies to \verb{_dfr} variant.}
 }
 \value{
 Funksjonen returnerer et listeobjekt med to elementer.
@@ -51,5 +51,5 @@ Denne funksjonen er en wrapper rundt funksjonene map_dfr og safely fra purrr.
 Se hjelpeside for purrr::map for doks.
 }
 \examples{
-a <- safely_map_dfr(c(-1, 1), ~ data.frame(a = rnorm(.)))
+safely_map_dfr(c(-1, 1), ~ data.frame(a = rnorm(.)))
 }
