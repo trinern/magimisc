@@ -1,7 +1,7 @@
 # magimisc
 
 <!-- badges: start -->
-[![R build status](https://github.com/andrewaage/magimisc/workflows/R-CMD-check/badge.svg)](https://github.com/andrewaage/magimisc/actions)
+[![R build status](https://github.com/jpiversen/magimisc/workflows/R-CMD-check/badge.svg)](https://github.com/jpiversen/magimisc/actions)
 <!-- badges: end -->
 
 ![](misc/imgfile.png)
