@@ -20,19 +20,7 @@ tabset_list(list, header_level, header_names = NULL)
 Hvert element i listen blir printet i en "tab" i en markdown rapport.
 }
 \examples{
-```{r cars}
-my_plot_function <- function(cylinders) {
-mtcars \%>\%
-filter(cyl == cylinders) \%>\%
-ggplot(aes(hp, mpg)) +
-geom_point()
-}
-p <- purrr::map(c(4, 6, 8), my_plot_function)
-```
-
-# Overskrift {.tabset}
-```{r pressure, results="asis"}
-tabset_list(p, 2)
-```
-
+# The function is meant to be used in a markdown with the
+# chunk option results="asis".
+tabset_list(list(a = 1, b = 2), 2)
 }

@@ -86,5 +86,6 @@ The function use \code{\link[httr]{GET}} from the httr-package to download the f
 and \code{\link[httr]{write_disk}} from the same package to write the file. The downloaded file is deleted after use
 }
 \examples{
-read_excel_url(path = "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLSX_100.xlsx")
+# Not run
+if (FALSE) read_excel_url(path = "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLSX_100.xlsx")
 }
