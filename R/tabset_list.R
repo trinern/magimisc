@@ -34,7 +34,7 @@ tabset_list <- function(list, header_level, header_names = NULL) {
   if (is.null(header_names)) {
     list_names <- names(list)
     if (is.null(list_names)) {
-      warning("Mangler navn")
+      stop("Mangler navn")
       names <- letters[1:length(list)]
     } else {
       names <- list_names
