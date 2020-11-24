@@ -9,10 +9,16 @@
 #' @param path String to the path, Will only work with valid and open URLs
 #' @inheritParams readxl::read_excel
 #'
+#' @importFrom assertthat is.string
+#' @importFrom readxl read_excel
+#' @importFrom readxl readxl_progress
+#' @import httr
+#'
 #' @return tibble based on the excel sheet read
 #' @export
 #' @examples
-#' read_excel_url(path = "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLSX_100.xlsx")
+#' # Not run
+#' if (FALSE) read_excel_url(path = "https://file-examples.com/wp-content/uploads/2017/02/file_example_XLSX_100.xlsx")
 read_excel_url <- function(path, sheet = NULL, range = NULL, col_names = TRUE,
                            col_types = NULL, na = "", trim_ws = TRUE, skip = 0,
                            n_max = Inf, guess_max = min(1000, n_max),

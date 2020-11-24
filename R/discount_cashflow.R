@@ -18,13 +18,13 @@
 #'
 #' @examples
 #'
-#' df <- tibble(
+#' df <- data.frame(
 #' cf = c(100, 200, 300),
 #' rate = c(0.05, 0.10, 0.20),
 #' period = c(2020, 2021, 2022)
 #' )
 #'
-#' df_npv <- discount_cashflow(df, cf, rate, period)
+#' discount_cashflow(df, cf, rate, period)
 #'
 #'
 discount_cashflow <- function(df, cf, rate, period) {
