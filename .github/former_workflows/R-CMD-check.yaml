@@ -19,9 +19,10 @@ jobs:
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
 
     strategy:
-      fail-fast: false # Bør settes til true
+      fail-fast: false # Kan settes til TRUE for å spare tid ved kjøring
       matrix:
         config:
+        # Enkelte av disse kan slettes for å spare tid ved kjøring
           - {os: windows-latest, r: 'release'}
           - {os: macOS-latest, r: 'release'}
           - {os: ubuntu-20.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
@@ -73,6 +74,7 @@ jobs:
       - name: Check
         env:
           _R_CHECK_CRAN_INCOMING_REMOTE_: false
+        # error_on = "warning" under er strengt, og kan endres til error_on = "error"
         run: rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"), error_on = "warning", check_dir = "check")
         shell: Rscript {0}
 
